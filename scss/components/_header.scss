@@ -1,0 +1,50 @@
+.header__container {
+  padding: 1.5em 2em 3em 2em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(89.22deg, #cb11ab, #481173);
+}
+
+.header__input {
+  padding: 0.8em;
+  width: 100%;
+  font-size: 2em;
+  border-radius: 0.8em;
+  outline: none;
+  background-color: #f2c7f7;
+}
+
+.header__user {
+  display: flex;
+}
+
+.header__logo {
+  margin-left: 1em;
+  font-size: 4.2em;
+  color: $color-white;
+  text-transform: uppercase;
+}
+
+.header__logo :hover {
+  text-shadow: 4px 1px 2px #494cd8dc;
+  cursor: pointer;
+}
+
+.header__basket {
+  display: flex;
+  align-items: center;
+  margin-right: 2em;
+  text-align: center;
+}
+
+.header__basket-img {
+  transform: scale(1.5, 1.5);
+  width: 1.5em;
+}
+
+.header__basket-img:active {
+  transform: scale(1.5, 1.5);
+  width: 2em;
+}

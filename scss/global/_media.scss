@@ -1,0 +1,165 @@
+@media (min-width: 992px) and (max-width: 1199px){
+  //base
+.container { 
+max-width: 100%;
+}
+
+  //slider
+.slider {
+    height: 30em;   
+}
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  //base
+html {
+    font-size: 9px;
+}   
+
+.container { 
+    max-width: 100%;
+}
+
+.header__container {
+    justify-content: space-evenly;
+}
+.header__logo {
+    margin: 0em 4em 0.2em 4em;
+}
+
+.header__search {
+    margin: 0.2em 0 1em 0;
+    flex-basis: 70%;
+}
+
+.header__user {
+    margin: 0;
+}
+
+  //slider
+.slider {
+    height: 28em;
+    margin: 3em auto 2em auto;
+}
+
+.goods__text {
+    padding-left: 2em;
+}
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  //base
+html {
+    font-size: 9px;
+}  
+
+.container { 
+    max-width: 98%;
+}
+
+  //header
+
+.header__container {
+    justify-content: space-evenly;
+}
+
+.header__logo {
+    margin: 0.2em 4em 0 4em;
+}
+
+.header__search {
+    margin: 1em 0;
+    flex-basis: 60%;
+    margin: 1em 0 1.5em 0;
+}
+
+.header__user {
+    margin: 0;
+}
+
+.header__basket{
+    display: flex;
+    align-items: center;
+}
+
+.header__text {
+    display: none;
+}
+
+  //slider
+.slider {
+    height: 22em;
+    margin: 3em auto 2em auto;
+}
+
+#btn-prev, #btn-next {
+    width: 5em;
+}
+
+.wrapper__dots span {
+    width: 3em;
+    height: 0.6em;
+}
+
+.goods__text {
+    padding: 0.5em 0 0.5em 2em;
+}
+}
+
+@media (min-width: 319px) and (max-width: 480px) {
+  //base
+html {
+    font-size: 7px;
+}  
+
+.container { 
+    max-width: 99%;
+}
+
+  //header
+.header__container {
+    justify-content: space-evenly;
+}
+
+.header__logo {
+    margin: 0.2em 4em 0 4em;
+}
+
+.header__search {
+    margin: 1em 0;
+    flex-basis: 60%;
+    margin: 1em 0 1.5em 0;
+}
+
+.header__user {
+    margin: 0;
+}
+
+.header__basket{
+    display: flex;
+    align-items: center;
+}
+
+.header__text {
+    display: none;
+}
+
+  //slider
+.slider {
+    height: 18em;
+    margin: 5em auto 1em auto;
+    box-shadow: none;
+}
+
+#btn-prev, #btn-next {
+    width: 3.5em;
+}
+
+.wrapper__dots span {
+    display: none;
+}
+
+  //goods
+.goods__text {
+    padding: 0.5em 0 0.2em 1.5em;
+}
+}
