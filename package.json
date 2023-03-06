@@ -1,0 +1,25 @@
+{
+  "name": "tms-98-team-3",
+  "version": "1.0.0",
+  "description": "Wildberries clone",
+  "main": "index.js",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teach-Me-Skills-Frontend/tms-98-team-3.git"
+  },
+  "keywords": [
+    "Wildberries",
+    "clone"
+  ],
+  "author": "Liza, Vanya, Roma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teach-Me-Skills-Frontend/tms-98-team-3/issues"
+  },
+  "homepage": "https://github.com/Teach-Me-Skills-Frontend/tms-98-team-3#readme"
+}
