@@ -1,4 +1,5 @@
-import { Products } from "../constants"
+import { getDefaultProducts } from "../constants"
+import { ProductStatus } from "../constants"
 
 const LocalStorageKey = {
     Products: 'products'
@@ -25,8 +26,29 @@ export class Model {
     getSaveProducts = () => {
         const savedProducts = localStorage.getItem(LocalStorageKey.Products);
         if (!savedProducts) {
-            return Products;
+            return getDefaultProducts();
         }
         return JSON.parse(savedProducts);
+    }
+
+    getProductsInBasket = () => {
+        return this.products.filter(({ status }) => status === ProductStatus.InCart);
+    }
+
+    removeProductsFromBasket = () => {
+        this.products = getDefaultProducts();
+        localStorage.setItem(LocalStorageKey.Products, JSON.stringify(this.products));
+        return this.products;
+    }
+
+    getTotalPrice = () => {
+        const productsInBasket = this.getProductsInBasket();
+        if (productsInBasket === undefined) {
+            return 0;
+        } else if (productsInBasket.length === 0) {
+            return 0;
+        } else {
+            return productsInBasket.reduce((acc, curr) => { return acc + curr.price; }, 0);
+        }
     }
 }
