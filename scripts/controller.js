@@ -7,7 +7,10 @@ export class Controller {
         this.model = new Model();
         this.view = new View({
             products: this.model.products,
-            onProductAction: this.onProductAction
+            productsInBasket: this.model.getProductsInBasket(),
+            onProductAction: this.onProductAction,
+            onClearProductsFromBasket: this.onClearProductsFromBasket,
+            totalPrice: this.model.getTotalPrice()
         }) 
     }
 
@@ -29,5 +32,14 @@ export class Controller {
         }
 
         this.view.renderProducts(this.model.products);
+        this.view.renderProductsInBasket(this.model.getProductsInBasket());
+        this.view.setTotalPrice(this.model.getTotalPrice());
+    }
+
+    onClearProductsFromBasket = () => {
+        this.model.removeProductsFromBasket();
+        this.view.renderProducts(this.model.products);
+        this.view.renderProductsInBasket(this.model.getProductsInBasket());
+        this.view.setTotalPrice(this.model.getTotalPrice());
     }
 }
