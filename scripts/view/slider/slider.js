@@ -71,7 +71,7 @@ export class Slider{
     
     slider() {
         setInterval(this.nextSlide, 5000);
-    }
+    };
 
     handleTouchStart = (event) => {
         const firstTouch = event.touches[0];
