@@ -28,7 +28,7 @@ export class Controller {
         }
 
         if (action === ProductAction.QuickView) {
-            console.log(action, payload);
+            this.view.quickViewModal.onQuickView(payload);
         }
 
         this.view.renderProducts(this.model.products);

@@ -36,7 +36,9 @@ export class Model {
     }
 
     removeProductsFromBasket = () => {
-        this.products = getDefaultProducts();
+        this.products.forEach(product => {
+            product.status = ProductStatus.NotInCart
+        });
         localStorage.setItem(LocalStorageKey.Products, JSON.stringify(this.products));
         return this.products;
     }
