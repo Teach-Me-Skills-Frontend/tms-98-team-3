@@ -53,4 +53,8 @@ export class Model {
             return productsInBasket.reduce((acc, curr) => { return acc + curr.price; }, 0);
         }
     }
+
+    searchProduct = (searchText) => {
+        return this.products.filter(({ name }) => name === searchText);
+    }
 }
