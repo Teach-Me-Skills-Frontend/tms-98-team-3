@@ -10,7 +10,8 @@ export class Controller {
             productsInBasket: this.model.getProductsInBasket(),
             onProductAction: this.onProductAction,
             onClearProductsFromBasket: this.onClearProductsFromBasket,
-            totalPrice: this.model.getTotalPrice()
+            totalPrice: this.model.getTotalPrice(),
+            onProductsSearch: this.searchForProducts
         }) 
     }
 
@@ -41,5 +42,9 @@ export class Controller {
         this.view.renderProducts(this.model.products);
         this.view.renderProductsInBasket(this.model.getProductsInBasket());
         this.view.setTotalPrice(this.model.getTotalPrice());
+    }
+
+    searchForProducts = (searchText) => {
+        this.view.renderProducts(this.model.searchProduct(searchText));
     }
 }
