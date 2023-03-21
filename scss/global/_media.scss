@@ -363,7 +363,7 @@
 
     //header
     .header__container {
-        justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
     .header__logo {
@@ -376,8 +376,13 @@
         margin: 1em 0 1.5em 0;
     }
 
+    #clear-search-button {
+        width: 22%;
+    }
+
     .header__user {
         margin: 0;
+        width: 15%;
     }
 
     .header__basket {
