@@ -1,10 +1,16 @@
 const searchInputName = ('search-input');
 
 export class SearchForm {
-    constructor (onProductsSearch) {
+    constructor({ onProductsSearch, onClearSearch }) {
         this.searchForm = document.getElementById('search__id');
-        this. onProductsSearch = onProductsSearch;
-        this.searchForm.addEventListener ('submit', this.onSearchFormSubmit);
+        this.searchRequest = document.getElementById('goods__text');
+        this.clearSearchButton = document.getElementById('clear-search-button');
+
+        this.onProductsSearch = onProductsSearch;
+        this.onClearSearch = onClearSearch;
+
+        this.searchForm.addEventListener('submit', this.onSearchFormSubmit);
+        this.clearSearchButton.addEventListener('click', this.onClearSearch);
     }
 
     onSearchFormSubmit = (event) => {
