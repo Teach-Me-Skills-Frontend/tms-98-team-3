@@ -36,7 +36,7 @@ export function createRow({ name, price }) {
         if (header === 'Название товара') {
             tableCell.textContent = name;
         }
-       
+        
         if (header === 'Цена') {
             tableCell.textContent = price;
         }
