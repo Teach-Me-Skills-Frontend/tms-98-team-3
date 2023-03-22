@@ -2,11 +2,11 @@
   "name": "tms-98-team-3",
   "version": "1.0.0",
   "description": "Wildberries clone",
-  "main": "index.js",
   "source": "index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build --public-url ./",
+    "deploy": "npx gh-pages -d dist"
   },
   "repository": {
     "type": "git",
