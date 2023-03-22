@@ -55,6 +55,12 @@ export class Model {
     }
 
     searchProduct = (searchText) => {
-        return this.products.filter(({ name }) => name === searchText);
+        let foundProducts = [];
+        for (const product of this.products) {
+            if (product.name.includes(searchText)) {
+                foundProducts.push(product);
+            }
+        }
+        return foundProducts;
     }
 }
