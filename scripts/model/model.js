@@ -50,17 +50,11 @@ export class Model {
         } else if (productsInBasket.length === 0) {
             return 0;
         } else {
-            return productsInBasket.reduce((acc, curr) => { return acc + curr.price; }, 0);
+            return productsInBasket.reduce((acc, curr) =>  acc + curr.price, 0);
         }
     }
 
     searchProduct = (searchText) => {
-        let foundProducts = [];
-        for (const product of this.products) {
-            if (product.name.includes(searchText)) {
-                foundProducts.push(product);
-            }
-        }
-        return foundProducts;
+        return this.products.filter(product => product.name.includes(searchText));
     }
 }
